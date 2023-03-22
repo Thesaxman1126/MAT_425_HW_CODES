@@ -4,7 +4,7 @@ clear;
 x1 = 3;
 x2 = 5;
 xm = (x1+x2)/2;
-tol = eps;%2^(-48);
+tol = eps;
 
 % Braket corrector
 while poly(x1)*poly(x2) > 0
