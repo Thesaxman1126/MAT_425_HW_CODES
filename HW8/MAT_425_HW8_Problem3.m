@@ -65,8 +65,8 @@ function [soln] = RK4_Solver(y0, z0, dt, max_iter) % Solves the system above usi
     
     soln = yrk4;
 end
-% finds correct endpoint (nice)
-function [BVP_sol, fa, fb] = solve_BVP_Shooting(y0, za, zb, target, dt, tol) 
+% finds correct endpoint 
+function [BVP_sol, fa, fb] = solve_BVP_Shooting(y0, za, zb, target, dt, tol) % Nice
     t = 0:dt:1;
     N = length(t);
     max_iter = 500;
