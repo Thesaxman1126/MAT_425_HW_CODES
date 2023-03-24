@@ -48,7 +48,3 @@ end
 function J=Jaco(A,y)
 J=A+diag(exp(y));
 end
-
-
-
-

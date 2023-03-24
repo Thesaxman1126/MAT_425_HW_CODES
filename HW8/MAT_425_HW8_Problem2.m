@@ -66,5 +66,5 @@ function [soln, F_final, J_final] = solve_BVP_Jacobian(A, y1, y2, N, dx, tol, ma
     soln = [y1; y_in; y2];
     F_final = F;
     J_final = J;
-    norm(y_prev - y_in) 
+    norm(y_prev - y_in) % nice
 end
