@@ -1,7 +1,7 @@
 clc; clear all; close all;
 %% Problem 2
 Nx = 100; % x-grid size
-Nt = 20000; % t-grid size
+Nt = 19900; % t-grid size
 dx = 1/Nx; % x-grid spacing
 dt = 1/Nt; % t-grid spacing
 a = dt/(dx^2); 
@@ -16,9 +16,8 @@ u = sin(2*pi*xx);
 while norm(u-old) > eps
     soln = u*D;
     hold on
-    if mod(iter,100) == 0
+    if mod(iter,1000) == 0
         plot(x,[0,soln,0])
-        ylim([-1,1])
     end
     iter = iter+1;
     old = u;
@@ -26,6 +25,7 @@ while norm(u-old) > eps
     check = norm(u-old);
     if iter > max_iter
         disp("DNC")
+        disp(check)
         break
     end
 end
