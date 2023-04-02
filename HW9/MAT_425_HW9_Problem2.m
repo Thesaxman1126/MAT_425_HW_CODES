@@ -19,6 +19,7 @@ while norm(u-old) > eps
     if mod(iter,100) == 0
         plot(x,[0,soln,0])
         ylim([-1,1])
+        title("Numerical Solution to u_t = u_{xx}, u(0,t) = u(1,t) = 0, and u(x,0) = sin(2\pi x)")
     end
     iter = iter+1;
     old = u;
